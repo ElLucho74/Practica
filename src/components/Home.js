@@ -5,7 +5,8 @@ import "../App.css"
 function Home() {
   return (
 
-    <div>
+    <div align="left">
+     
       <br />
       <Container>
         
@@ -36,7 +37,18 @@ function Home() {
         <Card.Title>Método Return</Card.Title>        
         <Card.Text>
         Este método es obligatorio en cualquier componente, pues como su nombre lo dice, se utiliza para obtener los elementos finales a visualizar o pintar en el navegador. Debe ser una función pura, es decir, no debe modificar los props, no debe modificar el state ni realizar operaciones del DOM.
-        </Card.Text>       
+        </Card.Text>
+          
+      </Card.Body>
+    </Card>
+    </Col>
+    <Col>
+        <Card style={{ width: '18rem' }}>
+      <Card.Body>
+        <Card.Title>Repositorio Github</Card.Title>        
+        
+        <button><a href="https://github.com/ElLucho74/Practica.git">Github</a>
+    </button>      
       </Card.Body>
     </Card>
     </Col>
@@ -44,6 +56,7 @@ function Home() {
         
               
       </Container>
+      
     </div>
 
   )

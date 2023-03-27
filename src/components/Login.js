@@ -3,12 +3,15 @@ import Swal from 'sweetalert2'
 import { useState, useEffect } from 'react';
 import { gapi } from "gapi-script";
 import { Form, Button, Col, Row } from 'react-bootstrap';
-
+import ReCAPTCHA from "react-google-recaptcha";
 import FacebookLogin from 'react-facebook-login';
 
 function Login() {
 
   const key_login = "619534315775-dap4mggu27if0psvkqh0c7k1vhuroibn.apps.googleusercontent.com";
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
 
   const [user, setUser] = useState({});
 const [name,setName]=useState('')
@@ -78,6 +81,12 @@ const [picture,setPicture]=useState('')
       </Col>   
       <Col></Col> 
       </Row>
+      <br></br>
+      <div align="center">
+  <ReCAPTCHA
+    sitekey="6LcDDzglAAAAAEfXdDb5otvnP9-LDAfJbwIjh450"
+    onChange={onChange}
+  />
     <div className="center">
       <h1>CREDENCIALES DEL USUARIO</h1>
       <div className='btn'>
@@ -110,6 +119,11 @@ const [picture,setPicture]=useState('')
         <p>{name}</p>
         <p>{email}</p>
      
+      </div>
+      <div>
+     
+  </div>
+  
       </div>
      
 
